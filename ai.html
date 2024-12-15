@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="apiKeyScreen">
+            <h1>Generative AI Chat</h1>
+            <p>To use the Gemini API, you'll need an API key. If you don't already have one, create a key in Google AI Studio.</p>
+            <a href="https://makersuite.google.com/app/apikey" target="_blank">Get an API Key</a>
+            <div>
+                <input type="text" id="apiKeyInput" placeholder="Enter your API key">
+                <button onclick="submitApiKey()">Submit</button>
+            </div>
+        </div>
+        <div id="chatScreen" style="display:none;">
+            <div id="chatHistory"></div>
+            <div id="inputSection">
+                <input type="text" id="messageInput" placeholder="Enter a prompt...">
+                <button id="sendButton" onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
